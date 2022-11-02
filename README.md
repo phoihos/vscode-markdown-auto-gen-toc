@@ -27,12 +27,12 @@ Type `[[TOC]]` syntax where ever you want to insert the table of contents.
 
 Table of contributed settings (prefix "markdownAutoTOC."):
 
-| Name                | Default               | Description                                                                                                         |
-| ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| includeLevel        | `[2, 3]`              | Heading levels to include in the generated table of contents                                                        |
-| containerClass      | `"table-of-contents"` | The HTML class to apply to the container `<div/>` for the table of contents                                         |
-| containerHeaderHtml | `"Contents"`          | Optional HTML string  to display above the table of contents                                                        |
-| markerPattern       | `"TOC"`               | Regex pattern of the token to generate the table of contents<br/>(Use `"(TOC\|_TOC_)"` for Azure DevOps Wiki style) |
+| Name                | Default               | Description                                                                                                                                |
+| ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| includeLevel        | `[2, 3]`              | Heading levels to include in the generated table of contents                                                                               |
+| containerClass      | `"table-of-contents"` | The HTML class to apply to the container `<div/>` for the table of contents                                                                |
+| containerHeaderHtml | `"Contents"`          | Optional HTML string  to display above the table of contents                                                                               |
+| markerPattern       | `"TOC"`               | Regex pattern of the token to generate the table of contents<br/>(Use <code>"(TOC&#124;&#95;TOC&#95;)"</code> for Azure DevOps Wiki style) |
 
 > **Important:** Any changes made don't take effect until the VS Code window is reloaded or restarted, because the configuration settings could applied when the extension is activated.
 
