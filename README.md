@@ -7,9 +7,9 @@ Auto-generates the table of contents to VS Code's built-in markdown preview.
 ## Features
 
 - Auto-generates the table of contents
-- Supports to customizes heading levels
+- Supports to customize heading levels
   - See below [Settings](#settings)
-- Supports to customizes title header
+- Supports to customize title header
   - See below [Settings](#settings)
 - Supports Azure DevOps Wiki style table of contents token
   - See below [Settings](#settings)
@@ -21,7 +21,7 @@ To install this extension go to `View->Extensions` and search for `markdown-auto
 
 ## Usage
 
-Type the `[[TOC]]` syntax where ever you want to insert the table of contents.
+Type `[[TOC]]` syntax where ever you want to insert the table of contents.
 
 ## Settings
 
