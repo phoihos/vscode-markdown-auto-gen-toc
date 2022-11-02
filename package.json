@@ -1,0 +1,114 @@
+{
+  "name": "markdown-auto-gen-toc",
+  "displayName": "Markdown AutoTOC",
+  "description": "Auto-generates the table of contents to VS Code's built-in markdown preview",
+  "icon": "images/icon.png",
+  "publisher": "phoihos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phoihos/vscode-markdown-auto-gen-toc"
+  },
+  "bugs": {
+    "url": "https://github.com/phoihos/vscode-markdown-auto-gen-toc/issues"
+  },
+  "homepage": "https://github.com/phoihos/vscode-markdown-auto-gen-toc#readme",
+  "license": "MIT",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "markdown",
+    "table of contents",
+    "toc",
+    "auto-toc",
+    "auto-gen-toc",
+    "contents"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "configuration": {
+      "title": "Markdown AutoTOC",
+      "properties": {
+        "markdownAutoTOC.includeLevel": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+          },
+          "default": [
+            2,
+            3
+          ],
+          "description": "Heading levels to include in the generated table of contents"
+        },
+        "markdownAutoTOC.containerClass": {
+          "type": "string",
+          "default": "table-of-contents",
+          "description": "The HTML class to apply to the container `<div/>` for the table of contents"
+        },
+        "markdownAutoTOC.containerHeaderHtml": {
+          "type": "string",
+          "default": "Contents",
+          "description": "Optional HTML string  to display above the table of contents"
+        },
+        "markdownAutoTOC.markerPattern": {
+          "type": "string",
+          "default": "TOC",
+          "description": "Regex pattern of the token to generate the table of contents<br/>(Use `(TOC|_TOC_)` for Azure DevOps Wiki style)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "test-compile": "tsc -p ./",
+    "test-watch": "tsc -watch -p ./",
+    "pretest": "npm run test-compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "release": "standard-version --skip.tag",
+    "release-m": "npm run release -- --release-as major",
+    "release-n": "npm run release -- --release-as minor",
+    "release-p": "npm run release -- --release-as patch",
+    "release:tag": "standard-version --skip.bump --skip.changelog --skip.commit"
+  },
+  "standard-version": {
+    "scripts": {
+      "postchangelog": "replace '\\s*\\(\\[[a-f\\d]+\\]\\(h-null\\)\\)' '' CHANGELOG.md && replace '\\[(.+)\\]\\(v-null\\)' '$1' CHANGELOG.md && replace '(\\r?\\n){3,}' '$1$1' CHANGELOG.md"
+    }
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/markdown-it": "^12.2.3",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^16.11.62",
+    "@types/vscode": "^1.71.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint": "^8.24.0",
+    "glob": "^8.0.3",
+    "markdown-it": "^13.0.1",
+    "mocha": "^10.0.0",
+    "replace": "^1.2.1",
+    "standard-version": "^9.5.0",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.2",
+    "vscode-test": "^1.4.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "markdown-it-table-of-contents": "^0.6.0"
+  }
+}
