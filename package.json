@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/phoihos/vscode-markdown-auto-gen-toc#readme",
   "license": "MIT",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "engines": {
     "vscode": "^1.71.0"
   },
