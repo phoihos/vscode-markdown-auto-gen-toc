@@ -6,7 +6,7 @@ Auto-generate the table of contents to VS Code's built-in markdown preview.
 
 ## Features
 
-- Auto-generatesthe table of contents
+- Auto-generates the table of contents
 - Supports to customize heading levels
   - See below [Settings](#settings)
 - Supports to customize title header

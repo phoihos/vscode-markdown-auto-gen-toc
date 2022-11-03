@@ -63,7 +63,7 @@
         "markdownAutoTOC.markerPattern": {
           "type": "string",
           "default": "TOC",
-          "description": "Regex pattern of the token to generate the table of contents<br/>(Use `(TOC|_TOC_)` for Azure DevOps Wiki style)"
+          "description": "Regex pattern of the token to generate the table of contents (Use `(TOC|_TOC_)` for Azure DevOps Wiki style)"
         }
       }
     }
