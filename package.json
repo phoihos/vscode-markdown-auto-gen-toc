@@ -1,7 +1,7 @@
 {
   "name": "markdown-auto-gen-toc",
   "displayName": "Markdown AutoTOC",
-  "description": "Auto-generates the table of contents to VS Code's built-in markdown preview",
+  "description": "Auto-generate the table of contents to VS Code's built-in markdown preview",
   "icon": "images/icon.png",
   "publisher": "phoihos",
   "repository": {
@@ -21,12 +21,13 @@
     "Other"
   ],
   "keywords": [
+    "markdown-auto-toc",
     "markdown",
     "table of contents",
     "toc",
+    "contents",
     "auto-toc",
-    "auto-gen-toc",
-    "contents"
+    "auto-gen-toc"
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",

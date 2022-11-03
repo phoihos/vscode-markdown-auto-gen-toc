@@ -1,12 +1,12 @@
 # Markdown AutoTOC
 
-Auto-generates the table of contents to VS Code's built-in markdown preview.
+Auto-generate the table of contents to VS Code's built-in markdown preview.
 
 ![Demo](./images/readme/demo.gif)
 
 ## Features
 
-- Auto-generates the table of contents
+- Auto-generatesthe table of contents
 - Supports to customize heading levels
   - See below [Settings](#settings)
 - Supports to customize title header
